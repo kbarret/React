@@ -8,14 +8,14 @@ class Hello extends React.Component {
 class Button extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { liked: false };
+    this.state = false ;
   }
 
   render() {
-    if (this.state.liked) {
+    if (this.state === true) {
       return 'You liked this.';
     }
-    return e('button',{ onClick: () => this.setState({ liked: true }) },'Like');
+    return e('button',{ onClick: () => this.state = true },'Like');
   }
 }
 const like = new Button;
